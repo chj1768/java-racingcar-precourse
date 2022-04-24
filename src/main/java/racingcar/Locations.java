@@ -1,6 +1,7 @@
 package racingcar;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
-public class Locations extends HashMap<Car, Integer> {
+public class Locations extends LinkedHashMap<Car, Integer> {
+
 }
