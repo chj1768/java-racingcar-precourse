@@ -25,6 +25,11 @@ public class PositionTest {
 	}
 
 	@Test
+	public void 위치는_타입이_다른_경우_다르다고_판별한다() {
+		Assertions.assertNotEquals(new Position(), new CarName("car"));
+	}
+
+	@Test
 	public void 위치는_더_오른쪽에_있는_경우를_큰_수로_판별한다() {
 		Position position1 = new Position();
 		Position position2 = new Position();
