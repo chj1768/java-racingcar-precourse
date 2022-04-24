@@ -6,8 +6,8 @@ import racingcar.domain.*;
 
 import java.util.function.Supplier;
 
-public class ConsoleRacingCar {
-	public void execute() {
+public class ConsoleView {
+	public void render() {
 		Cars cars = process(this::cars);
 		ControlTower controlTower = new ControlTower(cars);
 		Rounds rounds = process(this::rounds);

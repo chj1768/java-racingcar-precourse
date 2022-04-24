@@ -29,7 +29,7 @@ Location 내 차들의 위치 정보를 표현한다.
 차 이름과 함께 Car를 구성한다. Car 의 직전 상태를 표현한다. 
 
 뷰 객체
-- [X] ConsoleRacingCar
+- [X] ConsoleView
 콘솔 형태로 자동차 경주 게임을 뷰잉한다. 사용자 인터페이스를 담당한다.
 
 

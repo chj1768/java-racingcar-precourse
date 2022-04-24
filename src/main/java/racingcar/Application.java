@@ -1,9 +1,9 @@
 package racingcar;
 
-import racingcar.view.ConsoleRacingCar;
+import racingcar.view.ConsoleView;
 
 public class Application {
     public static void main(String[] args) {
-		new ConsoleRacingCar().execute();
+		new ConsoleView().render();
     }
 }
