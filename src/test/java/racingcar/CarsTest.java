@@ -22,4 +22,14 @@ class CarsTest {
 		Assertions.assertTrue(mockCar2.isNotifyObserversCalled());
 	}
 
+	@Test
+	public void 차들은_중복된_이름을_가질_수_없다() {
+		Cars cars = new Cars();
+		MockCar mockCar1 = new MockCar(new CarName("mock1"));
+		MockCar mockCar2 = new MockCar(new CarName("mock1"));
+		cars.add(mockCar1);
+
+		Assertions.assertThrowsExactly(IllegalArgumentException.class, () -> cars.add(mockCar2));
+	}
+
 }

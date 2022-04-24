@@ -23,4 +23,10 @@ public class CarNameTest {
 	void 차_이름은_5자_이하만_가능하다(String input) {
 		Assertions.assertDoesNotThrow(() -> new CarName(input));
 	}
+
+	@ParameterizedTest
+	@ValueSource(strings = {"0", "12345", "     ", "*", "#$%^$", "😀", "😀😀"})
+	void 차_이름은_input이_같으면_같은_객체라고_생각한다(String input) {
+		Assertions.assertEquals(new CarName(input), new CarName(input));
+	}
 }

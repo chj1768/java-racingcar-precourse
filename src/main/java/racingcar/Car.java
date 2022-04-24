@@ -2,6 +2,7 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
+import java.util.Objects;
 import java.util.Observable;
 
 public class Car extends Observable {
@@ -20,11 +21,6 @@ public class Car extends Observable {
 		return status == Status.STOP;
 	}
 
-	@Override
-	public String toString() {
-		return carName.toString();
-	}
-
 	public void drive() {
 		int number = Randoms.pickNumberInRange(MINIMAL_NUMBER, MAXIMAL_NUMBER);
 
@@ -36,5 +32,25 @@ public class Car extends Observable {
 
 		setChanged();
 		notifyObservers();
+	}
+
+	@Override
+	public String toString() {
+		return carName.toString();
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (!(o instanceof Car))
+			return false;
+		Car car = (Car) o;
+		return Objects.equals(carName, car.carName);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(carName);
 	}
 }

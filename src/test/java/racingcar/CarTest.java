@@ -2,6 +2,8 @@ package racingcar;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import racingcar.utils.MockCar;
 
 import java.util.Observable;
@@ -22,5 +24,12 @@ public class CarTest {
 		car.drive();
 
 		Assertions.assertTrue(car.isNotifyObserversCalled());
+	}
+
+	@ParameterizedTest
+	@ValueSource(strings = {"0", "12345", "     ", "*", "#$%^$", "😀", "😀😀"})
+	void 차는_차_이름이_같으면_같은_객체라고_생각한다(String input) {
+		CarName carName = new CarName(input);
+		Assertions.assertEquals(new Car(carName), new Car(carName));
 	}
 }
