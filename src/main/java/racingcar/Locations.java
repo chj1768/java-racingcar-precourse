@@ -37,7 +37,7 @@ public class Locations extends LinkedHashMap<Car, Position> {
 		for (Car car : cars) {
 			checkAndSetWinner(winner, car, winners);
 		}
-		return cars;
+		return winners;
 	}
 
 	private Position getWinner() {
@@ -45,7 +45,7 @@ public class Locations extends LinkedHashMap<Car, Position> {
 	}
 
 	private void checkAndSetWinner(Position winner, Car car, Cars winners) {
-		if (winner.compareTo(this.get(car)) == 0)
+		if (winner.equals(this.getPosition(car)))
 			winners.add(car);
 	}
 }
