@@ -1,7 +1,7 @@
-package racingcar;
+package racingcar.domain;
 
 public class Rounds {
-	private int rounds;
+	private final int rounds;
 
 	public Rounds(String size) {
 		try {

@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.domain;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -27,7 +27,7 @@ public class CarTest {
 	}
 
 	@ParameterizedTest
-	@ValueSource(strings = {"0", "12345", "     ", "*", "#$%^$", "😀", "😀😀"})
+	@ValueSource(strings = { "0", "12345", "     ", "*", "#$%^$", "😀", "😀😀" })
 	void 차는_차_이름이_같으면_같은_객체라고_생각한다(String input) {
 		CarName carName = new CarName(input);
 		Assertions.assertEquals(new Car(carName), new Car(carName));

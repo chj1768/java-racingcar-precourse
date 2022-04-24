@@ -1,7 +1,7 @@
 package racingcar.utils;
 
-import racingcar.Car;
-import racingcar.CarName;
+import racingcar.domain.Car;
+import racingcar.domain.CarName;
 
 public class MockCar extends Car {
 	private boolean isCalled = false;

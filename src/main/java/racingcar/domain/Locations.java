@@ -1,9 +1,9 @@
-package racingcar;
+package racingcar.domain;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
 
-public class Locations extends LinkedHashMap<Car, Position> {
+class Locations extends LinkedHashMap<Car, Position> {
 	public Locations(Cars cars) {
 		for (Car car : cars) {
 			this.put(car, new Position());

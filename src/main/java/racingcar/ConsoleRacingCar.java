@@ -2,6 +2,7 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
 import org.assertj.core.util.Strings;
+import racingcar.domain.*;
 
 import java.util.function.Supplier;
 

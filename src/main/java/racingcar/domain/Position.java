@@ -1,8 +1,8 @@
-package racingcar;
+package racingcar.domain;
 
 import java.util.Objects;
 
-public class Position implements Comparable<Position> {
+class Position implements Comparable<Position> {
 	private int position = 0;
 
 	public void right() {
