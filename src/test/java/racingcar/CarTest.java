@@ -16,7 +16,7 @@ public class CarTest {
 
 	@Test
 	void 차는_동작을_옵저버에게_알린다() {
-		MockCar car = new MockCar(new CarName("mockCar"));
+		MockCar car = new MockCar(new CarName("mock"));
 		Assertions.assertFalse(car.isNotifyObserversCalled());
 
 		car.drive();
