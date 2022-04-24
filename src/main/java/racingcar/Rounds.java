@@ -5,10 +5,17 @@ public class Rounds {
 
 	public Rounds(String size) {
 		try {
-			this.rounds = Integer.parseUnsignedInt(size);
+			int rounds = Integer.parseUnsignedInt(size);
+			checkNonZero(rounds);
+			this.rounds = rounds;
 		} catch (NumberFormatException e) {
 			throw new IllegalArgumentException(e);
 		}
+	}
+
+	private void checkNonZero(int rounds) {
+		if (rounds == 0)
+			throw new IllegalArgumentException("적절하지 않은 rounds");
 	}
 
 	public void iterate(Runnable runnable) {
