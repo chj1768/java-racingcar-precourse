@@ -11,6 +11,8 @@ public class ConsoleRacingCar {
 		ControlTower controlTower = new ControlTower(cars);
 		Rounds rounds = process(this::rounds);
 
+		System.out.println();
+		System.out.println("실행 결과");
 		repeatPerRound(cars, controlTower, rounds);
 
 		System.out.println("최종 우승자: " + Strings.join(controlTower.getWinners()).with(", "));
@@ -19,7 +21,6 @@ public class ConsoleRacingCar {
 	private void repeatPerRound(Cars cars, ControlTower controlTower, Rounds rounds) {
 		rounds.iterate(() -> {
 			cars.driveAll();
-			System.out.println("실행 결과");
 			for (Car car : controlTower.getAll()) {
 				System.out.println(car + " : " + controlTower.getPosition(car));
 			}
