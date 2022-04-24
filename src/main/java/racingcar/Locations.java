@@ -13,7 +13,7 @@ public class Locations extends LinkedHashMap<Car, Position> {
 	public Position getPosition(Car car) {
 		Position position = this.get(car);
 		if (position == null)
-			throw new IllegalArgumentException("컨트롤타워가 관찰중인 자동차가 아닙니다.");
+			throw new IllegalArgumentException("관찰중인 자동차가 아님");
 
 		return position;
 	}
